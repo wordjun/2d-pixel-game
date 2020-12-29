@@ -15,26 +15,51 @@ public class DoorScript : MonoBehaviour
         Start:적들에게 총을 쏳을 능력을 부여할때
      */
 
-    private bool isInFrontofDoor;
+    [SerializeField] private bool isInFrontofDoor;
+    [SerializeField] private bool isDoorOpen;
     public AudioSource doorOpenSound;
+    public AudioSource doorCloseSound;
+    public Animator door;
+    [SerializeField] private BoxCollider2D passThrough;
     // Start is called before the first frame update
     void Start()
     {
         isInFrontofDoor = false;
+        isDoorOpen = false;
+        passThrough.isTrigger = false;
     }
-    void OnTriggerEnter(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
             isInFrontofDoor = true;
     }
-    void OnTriggerExit(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
             isInFrontofDoor = false;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        //플레이어가 문앞에 서있는 경우
+        if (isInFrontofDoor)
+        {
+            //문이 닫긴 상태이며 E키를 눌렀을때
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (!isDoorOpen)
+                {
+                    isDoorOpen = true;
+                    doorOpenSound.Play();
+                }
+                else
+                {
+                    isDoorOpen = false;
+                    doorCloseSound.Play();
+                }
+                door.SetBool("isOpen", isDoorOpen);
+                passThrough.isTrigger = isDoorOpen;//true가 되면 trigger가 켜지면서 통과가능
+            }
+        }
     }
 }
