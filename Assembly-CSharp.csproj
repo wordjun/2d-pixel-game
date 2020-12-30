@@ -58,7 +58,11 @@
      <Compile Include="Assets\DoorScript.cs" />
      <Compile Include="Assets\Scripts\LoadFloor.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\ShowGuideText.cs" />
      <Compile Include="Assets\playFootsteps.cs" />
+     <None Include="Assets\Fonts\pixelade\leame.txt" />
+     <None Include="Assets\Fonts\pixelade\llegiu-me.txt" />
+     <None Include="Assets\Fonts\pixelade\read me.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/2019.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

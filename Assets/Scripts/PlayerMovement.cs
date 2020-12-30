@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         flashLight.SetActive(false);
+        //DontDestroyOnLoad(transform);
     }
     /*
      * UPDATE:
