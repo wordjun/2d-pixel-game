@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     public Animator animator;
-    public float runSpeed = 40f;
+    public float walkSpeed = 10f;
+    public float sprintSpeed = 20f;
     float horizontalMove = 0f;
 
     public GameObject flashLight;
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         flashLight.SetActive(false);
-        //DontDestroyOnLoad(transform);
+        //DontDestroyOnLoad(gameObject);
     }
     /*
      * UPDATE:
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
      */
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * walkSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         //F키로 스마트폰 후레쉬 on

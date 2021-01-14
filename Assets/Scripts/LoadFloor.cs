@@ -8,12 +8,14 @@ public class LoadFloor : MonoBehaviour
 {
     //crossfade
     [SerializeField] private bool isAtLoader;
+    private string FloorName;
     public Animator transition;
     //public GameObject crossfade;
     public float transitionTime = 1.0f;//crossfade 애니메이션 지속시간만큼 inspector에서 설정하면 된다.
-    void Start()
+    void Awake()
     {
         //crossfade.SetActive(false);
+        FloorName = SceneManager.GetActiveScene().name;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,16 +34,14 @@ public class LoadFloor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                //Debug.Log("Going downstairs.");
-                LoadDownstairs();
+                if (!FloorName.Equals("Basement 1"))
+                    //Debug.Log("Going downstairs.");
+                    LoadDownstairs();
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                if(SceneManager.GetActiveScene().name.Equals("Third Floor"))
-                {
-                    //Debug.Log("Going upstairs.");
+                if(!FloorName.Equals("F Floor"))
                     LoadUpstairs();
-                }
             }
         }
     }

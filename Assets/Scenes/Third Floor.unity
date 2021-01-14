@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -461,7 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSmoothing: 0.1
   animator: {fileID: 522662915}
-  runSpeed: 10
+  walkSpeed: 10
+  sprintSpeed: 20
   flashLight: {fileID: 916881717}
   audioSource:
   - {fileID: 522662917}
@@ -2540,7 +2541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1529850831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,7 +2571,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.64705884, y: 1}
+    m_SensorSize: {x: 0.85431653, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
