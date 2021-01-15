@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public float walkSpeed = 10f;
     public float sprintSpeed = 20f;
+    private bool isSprinting = false;
+    public Slider staminaBar;
+    public float sliderBarTime;
     float horizontalMove = 0f;
 
     public GameObject flashLight;
@@ -41,7 +45,33 @@ public class PlayerMovement : MonoBehaviour
      */
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * walkSpeed;
+        //sprint
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+            animator.SetBool("isSprinting", true);
+            horizontalMove = Input.GetAxisRaw("Horizontal") * sprintSpeed;
+            staminaBar.value -= (10.0f * Time.deltaTime);
+
+            if(staminaBar.value <= 1)
+            {
+                animator.SetBool("isSprinting", false);
+                horizontalMove = Input.GetAxisRaw("Horizontal") * walkSpeed;
+            }
+        }
+        else
+        {
+            isSprinting = false;
+            animator.SetBool("isSprinting", false);
+            horizontalMove = Input.GetAxisRaw("Horizontal") * walkSpeed;
+        }
+
+        if (!isSprinting)
+        {
+            staminaBar.value += (10.0f * Time.deltaTime);
+        }
+        
+
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         //F키로 스마트폰 후레쉬 on
@@ -59,15 +89,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isFlashOn", isFlashlightOn);
             flashOnSound.Play();
         }
-        //if (Input.GetKeyDown(KeyCode.DownArrow))
-        //{
-        //    crouch = true;
-
-        //}
-        //else if (Input.GetKeyUp(KeyCode.DownArrow))
-        //{
-        //    crouch = false;
-        //}
     }
     //public void OnCrouching(bool isCrouching)
     //{

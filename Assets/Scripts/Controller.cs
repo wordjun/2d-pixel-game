@@ -15,9 +15,9 @@ public class Controller : MonoBehaviour
         ////Vector3 p = playerCam.ScreenToWorldPoint(new Vector3(playerPos.x, playerPos.y, playerPos.z));
         ////Draw a yellow sphere at the transform's position
         Vector3 mousePos = playerCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-
+        
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(new Vector3(mousePos.x + flashlightFieldX, mousePos.y + flashlightFieldY), sphereGizmosRadius);
+        Gizmos.DrawWireSphere(new Vector3(mousePos.x, mousePos.y), sphereGizmosRadius);
 
     }
     // Update is called once per frame
