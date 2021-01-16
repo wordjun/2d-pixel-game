@@ -30,10 +30,13 @@ public class ShowGuideText : MonoBehaviour
     }
     public void TextFade()
     {
-        //Debug.Log(text.canvasRenderer.GetAlpha());
+        //text의 알파값이 0이 아님과 동시에(현재 텍스트가 떠있는 상태) 
+        //플레이어가 계단앞에 서있지 않은 경우
         if (text.canvasRenderer.GetAlpha() != 0 && !isAtLoader)
-            text.canvasRenderer.SetAlpha(0);
+            text.canvasRenderer.SetAlpha(0);//텍스트 사라짐
+        //반대로 text의 알파값이 0임과 동시에(현재 텍스트가 떠있지 않은 상태) 
+        //플레이어가 계단앞에 서있는 경우
         if (text.canvasRenderer.GetAlpha() == 0 && isAtLoader)
-            text.canvasRenderer.SetAlpha(255);
+            text.canvasRenderer.SetAlpha(255);//텍스트 뜸
     }
 }

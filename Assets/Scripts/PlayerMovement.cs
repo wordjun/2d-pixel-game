@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //sprint
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && 
+            (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
             isSprinting = true;
             animator.SetBool("isSprinting", true);

@@ -55,9 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BackToFloor.cs" />
      <Compile Include="Assets\DDOL.cs" />
      <Compile Include="Assets\DoorScript.cs" />
      <Compile Include="Assets\FollowPlayer.cs" />
+     <Compile Include="Assets\LoadToilet.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Lights.cs" />
      <Compile Include="Assets\Scripts\LoadFloor.cs" />

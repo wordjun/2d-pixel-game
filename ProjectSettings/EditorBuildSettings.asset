@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/F Floor.unity
+    path: Assets/Scenes/4th Floor/F Floor.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Third Floor.unity
+    path: Assets/Scenes/3rd Floor/Third Floor.unity
     guid: 1fa38875af4be504184ad04fac09f454
   - enabled: 1
-    path: Assets/Scenes/Second Floor.unity
+    path: Assets/Scenes/2nd Floor/Second Floor.unity
     guid: bf5c490d2cd51064d84192c5b1c6835c
+  - enabled: 1
+    path: Assets/Scenes/4th Floor/Toilet/4th Floor Men's Toilet.unity
+    guid: 84f0ec2d686ed4343b148de76d9c2114
   m_configObjects: {}
