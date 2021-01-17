@@ -61,8 +61,12 @@
      <Compile Include="Assets\FollowPlayer.cs" />
      <Compile Include="Assets\LoadToilet.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\IItem.cs" />
+     <Compile Include="Assets\Scripts\KeyCard.cs" />
+     <Compile Include="Assets\Scripts\KeyCardInteraction.cs" />
      <Compile Include="Assets\Scripts\Lights.cs" />
      <Compile Include="Assets\Scripts\LoadFloor.cs" />
+     <Compile Include="Assets\Scripts\PlayerItemInteraction.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ShowGuideText.cs" />
      <Compile Include="Assets\playFootsteps.cs" />
