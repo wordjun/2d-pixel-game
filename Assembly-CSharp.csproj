@@ -55,22 +55,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BackToFloor.cs" />
-     <Compile Include="Assets\DDOL.cs" />
-     <Compile Include="Assets\DoorScript.cs" />
-     <Compile Include="Assets\FollowPlayer.cs" />
-     <Compile Include="Assets\LoadToilet.cs" />
+     <Compile Include="Assets\Scripts\BackToFloor.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\DDOL.cs" />
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
+     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\IItem.cs" />
      <Compile Include="Assets\Scripts\KeyCard.cs" />
      <Compile Include="Assets\Scripts\KeyCardInteraction.cs" />
      <Compile Include="Assets\Scripts\Lights.cs" />
      <Compile Include="Assets\Scripts\LoadFloor.cs" />
+     <Compile Include="Assets\Scripts\LoadToilet.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerItemInteraction.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ShowGuideText.cs" />
-     <Compile Include="Assets\playFootsteps.cs" />
+     <Compile Include="Assets\Scripts\playFootsteps.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Fonts\pixelade\leame.txt" />
