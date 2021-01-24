@@ -38,6 +38,6 @@ public class BackToFloor : MonoBehaviour
         //해당 층 남자화장실에서 해당층으로 다시 이동할 수 있도록 설정
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);//설정한 transition time만큼 대기
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene("F Floor");
     }
 }

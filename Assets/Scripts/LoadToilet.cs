@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadToilet : MonoBehaviour
 {
+    public string toiletName;
     private bool isAtToilet;//화장실 앞에 서있는지에 대한 유무확인용
     public Animator transition;
     public float transitionTime = 1.0f;//장면 load(transition)하는시간
@@ -20,6 +21,10 @@ public class LoadToilet : MonoBehaviour
         if (other.tag == "Player")
             isAtToilet = false;
     }
+    void Start()
+    {
+        isAtToilet = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -34,9 +39,9 @@ public class LoadToilet : MonoBehaviour
 
     IEnumerator EnterToilet()
     {
-        //프로젝트 scene 구성에서 scene build index + 3 하면 해당 층 화장실로 이동할 수 있도록 설정
+        
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene(toiletName);
     }
 }
