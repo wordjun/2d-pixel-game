@@ -7,6 +7,7 @@ public class DDOL : MonoBehaviour
     public DDOL[] obj;
     void Awake()
     {
+
         obj = FindObjectsOfType<DDOL>();
         //Debug.Log("outside for loop obj length: " + obj.Length);
         for (int i = 0; i < obj.Length; i++)
