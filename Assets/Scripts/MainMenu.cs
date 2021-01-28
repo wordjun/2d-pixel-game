@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("F Floor");//4층에서부터 게임시작
+        SceneManager.LoadScene("Introduction");//게임 시작버튼 누르면 인트로화면으로 전환
     }
 
     public void QuitGame()
