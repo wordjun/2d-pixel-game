@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Interactions.cs" />
      <Compile Include="Assets\Scripts\BackToFloor.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\DDOL.cs" />
@@ -65,7 +66,7 @@
      <Compile Include="Assets\Scripts\KeyCardInteraction.cs" />
      <Compile Include="Assets\Scripts\Lights.cs" />
      <Compile Include="Assets\Scripts\LoadFloor.cs" />
-     <Compile Include="Assets\Scripts\LoadToilet.cs" />
+     <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
