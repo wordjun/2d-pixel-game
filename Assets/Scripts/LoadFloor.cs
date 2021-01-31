@@ -9,6 +9,8 @@ public class LoadFloor : MonoBehaviour
     //crossfade
     [SerializeField] private bool isAtLoader;
     private string FloorName;
+    public string Upstairs;
+    public string Downstairs;
     public Animator transition;
     //public GameObject crossfade;
     public float transitionTime = 1.0f;//crossfade 애니메이션 지속시간만큼 inspector에서 설정하면 된다.
@@ -34,33 +36,33 @@ public class LoadFloor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                if (!FloorName.Equals("Basement 1"))
+                if (Downstairs != "None")
                     //Debug.Log("Going downstairs.");
                     LoadDownstairs();
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                if(!FloorName.Equals("F Floor"))
+                if(Upstairs != "None")
                     LoadUpstairs();
             }
         }
     }
     public void LoadDownstairs()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(Downstairs));
     }
     public void LoadUpstairs()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        StartCoroutine(LoadLevel(Upstairs));
     }
     //코루틴으로 crossfade animation time delay주기
-    IEnumerator LoadLevel(int floorIndex)
+    IEnumerator LoadLevel(string floor)
     {
         //play animation
         transition.SetTrigger("Start");
         //wait(pause this coroutine for x secs before going on
         yield return new WaitForSeconds(transitionTime);
         //load scene
-        SceneManager.LoadScene(floorIndex);
+        SceneManager.LoadScene(floor);
     }
 }

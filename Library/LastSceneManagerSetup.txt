@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/3rd Floor/Toilet/3rd Floor Women's Toilet.unity
+- path: Assets/Scenes/4th Floor/4th Floor.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

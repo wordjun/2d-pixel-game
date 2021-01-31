@@ -4192,7 +4192,7 @@ GameObject:
   - component: {fileID: 2004858557}
   - component: {fileID: 2004858556}
   m_Layer: 0
-  m_Name: To Fourth Floor
+  m_Name: To 3rd Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4227,6 +4227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1871717990}
   transitionTime: 1
+  floorName: 3rd Floor
 --- !u!114 &2004858557
 MonoBehaviour:
   m_ObjectHideFlags: 0

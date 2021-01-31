@@ -55,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Interactions.cs" />
      <Compile Include="Assets\Scripts\BackToFloor.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\DDOL.cs" />
@@ -68,13 +67,15 @@
      <Compile Include="Assets\Scripts\LoadFloor.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Monologue.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
+     <Compile Include="Assets\Scripts\OvertimeManual.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerItemInteraction.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ShowGuideText.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\playFootsteps.cs" />
-     <Compile Include="Assets\StartGame.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Fonts\pixelade\leame.txt" />

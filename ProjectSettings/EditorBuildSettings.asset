@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Introduction.unity
     guid: 2ed3a1cd355059843acaaa8beed9f5d4
   - enabled: 1
-    path: Assets/Scenes/4th Floor/F Floor.unity
+    path: Assets/Scenes/4th Floor/4th Floor.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/4th Floor/Toilet/4th Floor Men's Toilet.unity
@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/4th Floor/Toilet/4th Floor Women's Toilet.unity
     guid: 85b95b9819bbe48498c6f54b77049947
   - enabled: 1
-    path: Assets/Scenes/3rd Floor/Third Floor.unity
+    path: Assets/Scenes/3rd Floor/3rd Floor.unity
     guid: 1fa38875af4be504184ad04fac09f454
   - enabled: 1
     path: Assets/Scenes/3rd Floor/Toilet/3rd Floor Men's Toilet.unity
@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/3rd Floor/Toilet/3rd Floor Women's Toilet.unity
     guid: 1a4b035689db44542b86e06691e2f6c9
   - enabled: 1
-    path: Assets/Scenes/2nd Floor/Second Floor.unity
+    path: Assets/Scenes/2nd Floor/2nd Floor.unity
     guid: bf5c490d2cd51064d84192c5b1c6835c
   - enabled: 1
     path: Assets/Scenes/2nd Floor/Toilet/2nd Floor Men's Toilet.unity

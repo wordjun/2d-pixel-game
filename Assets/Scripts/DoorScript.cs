@@ -19,7 +19,7 @@ public class DoorScript : MonoBehaviour
     [SerializeField] private bool isDoorOpen;
     public AudioSource doorOpenSound;
     public AudioSource doorCloseSound;
-    public Animator door;
+    public Animator animator;
     [SerializeField] private BoxCollider2D passThrough;
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,7 @@ public class DoorScript : MonoBehaviour
         //플레이어가 문앞에 서있는 경우
         if (isInFrontofDoor)
         {
+            animator.SetBool("Interact", true);
             //문이 닫긴 상태이며 E키를 눌렀을때
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -57,9 +58,13 @@ public class DoorScript : MonoBehaviour
                     isDoorOpen = false;
                     doorCloseSound.Play();
                 }
-                door.SetBool("isOpen", isDoorOpen);
+                animator.SetBool("isOpen", isDoorOpen);
                 passThrough.isTrigger = isDoorOpen;//true가 되면 trigger가 켜지면서 통과가능
             }
+        }
+        else
+        {
+            animator.SetBool("Interact", false);
         }
     }
 }

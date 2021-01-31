@@ -8,6 +8,7 @@ public class BackToFloor : MonoBehaviour
     private bool isAtToilet;//화장실 문 앞에 서있는지에 대한 유무확인용
     public Animator transition;
     public float transitionTime = 1.0f;//장면 load(transition)하는시간
+    public string floorName;
 
     void OnTriggerEnter2D(Collider2D other)//화장실 앞에 서있는경우
     {
@@ -38,6 +39,6 @@ public class BackToFloor : MonoBehaviour
         //해당 층 남자화장실에서 해당층으로 다시 이동할 수 있도록 설정
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);//설정한 transition time만큼 대기
-        SceneManager.LoadScene("F Floor");
+        SceneManager.LoadScene(floorName);
     }
 }

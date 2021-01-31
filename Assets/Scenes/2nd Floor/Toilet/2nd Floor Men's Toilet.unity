@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4192,7 +4192,7 @@ GameObject:
   - component: {fileID: 2004858557}
   - component: {fileID: 2004858556}
   m_Layer: 0
-  m_Name: To Fourth Floor
+  m_Name: To 2nd Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4227,6 +4227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1871717990}
   transitionTime: 1
+  floorName: 2nd Floor
 --- !u!114 &2004858557
 MonoBehaviour:
   m_ObjectHideFlags: 0
