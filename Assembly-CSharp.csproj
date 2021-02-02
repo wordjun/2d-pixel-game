@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\EnterRoomUI.cs" />
      <Compile Include="Assets\EventsManager.cs" />
+     <Compile Include="Assets\ObjectInteraction.cs" />
      <Compile Include="Assets\Scripts\BackToFloor.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\DDOL.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\ShowGuideText.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\playFootsteps.cs" />
+     <Compile Include="Assets\VendingMachine.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Fonts\pixelade\leame.txt" />
