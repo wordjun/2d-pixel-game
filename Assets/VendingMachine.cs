@@ -30,7 +30,6 @@ public class VendingMachine : MonoBehaviour
     {
         if (isInFront)
         {
-
         }
     }
 }

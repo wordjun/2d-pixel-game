@@ -31,10 +31,10 @@ public class ObjectInteraction : MonoBehaviour
         if (isInFrontOfObject)
         {
             animator.SetBool("Interact", true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                animator.SetTrigger("Interact");
-            }
+        }
+        else
+        {
+            animator.SetBool("Interact", false);
         }
     }
 }
