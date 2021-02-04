@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EnterRoomUI : MonoBehaviour
 {
-    public Animator animator;
-    public bool isInFrontOfRoom;
+    private bool isInFrontOfRoom;
+    public Text text;
     void Start()
     {
         isInFrontOfRoom = false;
+        text.canvasRenderer.SetAlpha(0);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -31,11 +32,11 @@ public class EnterRoomUI : MonoBehaviour
     {
         if (isInFrontOfRoom)
         {
-            animator.SetBool("Interact", true);
+            text.canvasRenderer.SetAlpha(255);
         }
         else if (!isInFrontOfRoom)
         {
-            animator.SetBool("Interact", false);
+            text.canvasRenderer.SetAlpha(0);
         }
     }
 }

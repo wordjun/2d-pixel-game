@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class ObjectInteraction : MonoBehaviour
 {
     [SerializeField] private bool isInFrontOfObject;
-    public Animator animator;
+    public Text obsText;
+    public Text intText;
+    public string interactionText;
+    //public Animator animator;
     void Start()
     {
+        obsText.canvasRenderer.SetAlpha(0);
+        intText.canvasRenderer.SetAlpha(0);
         isInFrontOfObject = false;
+        intText.text = interactionText;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,13 +34,26 @@ public class ObjectInteraction : MonoBehaviour
 
     void Update()
     {
-        if (isInFrontOfObject)
+        TextFade();
+        if (isInFrontOfObject && Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetBool("Interact", true);
+            intText.canvasRenderer.SetAlpha(255);
         }
-        else
+        else if (!isInFrontOfObject)
         {
-            animator.SetBool("Interact", false);
+            intText.canvasRenderer.SetAlpha(0);
+        }
+    }
+    public void TextFade()
+    {
+        if (obsText.canvasRenderer.GetAlpha() != 0 && !isInFrontOfObject)
+        {
+            obsText.canvasRenderer.SetAlpha(0);//텍스트 사라짐
+        }
+
+        if (obsText.canvasRenderer.GetAlpha() == 0 && isInFrontOfObject)
+        {
+            obsText.canvasRenderer.SetAlpha(255);//텍스트 뜸
         }
     }
 }
