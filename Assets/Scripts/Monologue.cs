@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Monologue : MonoBehaviour
 {
     public Animator animator;
-    public float transitionTime;
+    public Text text;
     [SerializeField] private bool isInteracting;
     void Start()
     {
         isInteracting = false;
+        text.canvasRenderer.SetAlpha(0);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,13 +34,13 @@ public class Monologue : MonoBehaviour
     {
         if (isInteracting)
         {
-            StartCoroutine(StartMonologue());
+            animator.SetTrigger("Start");
+            text.canvasRenderer.SetAlpha(255);
+        }
+        else if (!isInteracting)
+        {
+            text.canvasRenderer.SetAlpha(0);
         }
     }
 
-    IEnumerator StartMonologue()
-    {
-        animator.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionTime);
-    }
 }
