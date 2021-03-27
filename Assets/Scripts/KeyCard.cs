@@ -13,6 +13,6 @@ public class KeyCard : MonoBehaviour, IItem
 
         player.keyCards["KeyCard A"]= true;
         keyCard.hasPickedUpKey = true;
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);//after picking up, keycard should no more be visible
     }
 }

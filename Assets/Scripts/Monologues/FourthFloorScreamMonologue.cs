@@ -34,23 +34,25 @@ public class FourthFloorScreamMonologue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isMonologueDone)
+        PlayerItemInteraction player = FindObjectOfType<PlayerItemInteraction>();
+        if(player.keyCards["KeyCard A"] == true && isInteracting)
         {
-            if (isInteracting)//if player is inside the colliderbox and hasn't started the monologue yet
-            {
-                animator.SetTrigger("Start");//set the animator trigger, start monologue animation
-                StartCoroutine(MonologueDone());
-            }
+            StartCoroutine(startMonologue());
         }
-        else if (isMonologueDone)
+        if (isMonologueDone && guideText.canvasRenderer.GetAlpha() == 0)
         {
-            //animator.SetTrigger("End");//set the animator trigger, end the animation
-            guideText.canvasRenderer.SetAlpha(255);//pop up guidetext
+            animator.gameObject.SetActive(false);
         }
+        
     }
-    IEnumerator MonologueDone()
+
+    IEnumerator startMonologue()
     {
-        yield return new WaitForSeconds(2.0f);
+        animator.SetTrigger("Start");
+        yield return new WaitForSeconds(4.1f);
+        guideText.canvasRenderer.SetAlpha(255);
+        yield return new WaitForSeconds(4.1f);
         isMonologueDone = true;
+        guideText.canvasRenderer.SetAlpha(0);
     }
 }
