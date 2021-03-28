@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerItemInteraction : MonoBehaviour
 {
     public Dictionary<string, bool> keyCards;
+    public AudioSource itemGetSound;
     void Start()
     {
         keyCards = new Dictionary<string, bool>();
@@ -16,9 +17,10 @@ public class PlayerItemInteraction : MonoBehaviour
     {
         //충돌한 오브젝트 확인
         IItem item = other.GetComponent<IItem>();
-
+        
         if(item != null)
         {
+            itemGetSound.Play();
             item.onPIckUp();
         }
     }

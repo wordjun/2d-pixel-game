@@ -16,8 +16,11 @@ public class KeyCardInteraction : MonoBehaviour
     void Update()
     {
         PlayerItemInteraction player = FindObjectOfType<PlayerItemInteraction>();
+
         if (player.keyCards["KeyCard A"] == true && hasPickedUpKey)
+        {
             StartCoroutine(pickUpMessage());
+        }
     }
     IEnumerator pickUpMessage()
     {
