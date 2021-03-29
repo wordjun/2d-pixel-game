@@ -7,6 +7,8 @@ public class FourthFloorScreamMonologue : MonoBehaviour
 {
     public Text guideText;
     public Animator animator;
+    public AudioSource scream;
+
     private bool isMonologueDone;
     [SerializeField] private bool isInteracting;
     void Start()
