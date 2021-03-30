@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OvertimeManual : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class OvertimeManual : MonoBehaviour
     public Animator animator;
     public GameObject manual;
     private bool isManualActive;
+    public AudioSource interactSound;
+    public AudioSource exitSound;
     void Start()
     {
         isInFrontOfComputer = false;
@@ -35,6 +38,7 @@ public class OvertimeManual : MonoBehaviour
             animator.SetBool("Interact", true);
             if (Input.GetKeyDown(KeyCode.E) && !isManualActive)
             {
+                interactSound.Play();
                 manual.SetActive(true);
                 isManualActive = true;
                 Time.timeScale = 0;//pause temporarily
@@ -43,9 +47,10 @@ public class OvertimeManual : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    exitSound.Play();
                     manual.SetActive(false);
                     isManualActive = false;
-                    Time.timeScale = 1;
+                    Time.timeScale = 1;//unpause
                 }
             }
         }

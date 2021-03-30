@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//ALL EVENTS MUST BE SET INACTIVE AFTER BEING TRIGGERED
 public class KeyCardInteraction : MonoBehaviour
 {
     public Text text;
@@ -17,8 +19,9 @@ public class KeyCardInteraction : MonoBehaviour
     {
         PlayerItemInteraction player = FindObjectOfType<PlayerItemInteraction>();
 
-        if (player.keyCards["KeyCard A"] == true && hasPickedUpKey)
+        if (player.keyCards["KeyCard A"] && hasPickedUpKey)
         {
+            Debug.Log("picked up keycard A, player  is: " + player.name);
             StartCoroutine(pickUpMessage());
         }
     }
@@ -28,5 +31,6 @@ public class KeyCardInteraction : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         text.canvasRenderer.SetAlpha(0);
         hasPickedUpKey = false;
+        //gameObject.SetActive(false);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//ALL EVENTS MUST BE SET INACTIVE AFTER BEING TRIGGERED
 public class FourthFloorScreamMonologue : MonoBehaviour
 {
     public Text guideText;
@@ -56,5 +57,7 @@ public class FourthFloorScreamMonologue : MonoBehaviour
         yield return new WaitForSeconds(4.1f);
         isMonologueDone = true;
         guideText.canvasRenderer.SetAlpha(0);
+
+        gameObject.SetActive(false);
     }
 }

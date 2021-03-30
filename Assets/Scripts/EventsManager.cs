@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class EventsManager : MonoBehaviour
 {
-    public bool afterScream;
+    public GameObject keyCardPickupEvent;
+    void Update()
+    {
+        
+    }
+    
 }
