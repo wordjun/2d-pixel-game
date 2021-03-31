@@ -9,10 +9,12 @@ public class KeyCardInteraction : MonoBehaviour
 {
     public Text text;
     public bool hasPickedUpKey;
+    public bool bSetInactive;
     void Awake()
     {
         text.canvasRenderer.SetAlpha(0);
         hasPickedUpKey = false;
+        bSetInactive = false;
     }
 
     void Update()
@@ -21,8 +23,12 @@ public class KeyCardInteraction : MonoBehaviour
 
         if (player.keyCards["KeyCard A"] && hasPickedUpKey)
         {
-            Debug.Log("picked up keycard A, player  is: " + player.name);
+            //Debug.Log("picked up keycard A, player  is: " + player.name);
             StartCoroutine(pickUpMessage());
+        }
+        if (bSetInactive)
+        {
+            StartCoroutine(setInactive());
         }
     }
     IEnumerator pickUpMessage()
@@ -31,6 +37,11 @@ public class KeyCardInteraction : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         text.canvasRenderer.SetAlpha(0);
         hasPickedUpKey = false;
-        //gameObject.SetActive(false);
+    }
+
+    IEnumerator setInactive()
+    {
+        yield return new WaitForSeconds(2.1f);
+        gameObject.SetActive(false);
     }
 }

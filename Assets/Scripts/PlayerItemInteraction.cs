@@ -21,7 +21,7 @@ public class PlayerItemInteraction : MonoBehaviour
         if(item != null)
         {
             itemGetSound.Play();
-            item.onPIckUp();
+            item.onPickUp();
         }
     }
 }

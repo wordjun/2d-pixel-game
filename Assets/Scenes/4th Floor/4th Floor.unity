@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c33fbac62f0a14bb181f3c17b2435f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCardPickupEvent: {fileID: 835091916}
+  events: []
 --- !u!1 &260552418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 273597664}
   - component: {fileID: 273597663}
   - component: {fileID: 273597662}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2084,7 +2084,7 @@ GameObject:
   - component: {fileID: 510867339}
   - component: {fileID: 510867341}
   - component: {fileID: 510867340}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4119,9 +4119,9 @@ GameObject:
   - component: {fileID: 835091919}
   - component: {fileID: 835091918}
   - component: {fileID: 835091921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: KeyCardInteraction
-  m_TagString: Untagged
+  m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4221,6 +4221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 877060917}
   hasPickedUpKey: 0
+  bSetInactive: 0
 --- !u!1 &855180453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,7 +4355,7 @@ GameObject:
   - component: {fileID: 877060919}
   - component: {fileID: 877060918}
   - component: {fileID: 877060917}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4434,7 +4435,7 @@ GameObject:
   - component: {fileID: 879941589}
   m_Layer: 0
   m_Name: Narrations and Dialogues(Monologues)
-  m_TagString: Untagged
+  m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7833,7 +7834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c33fbac62f0a14bb181f3c17b2435f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCardPickupEvent: {fileID: 0}
+  events: []
 --- !u!1 &1382825614
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,7 +9197,7 @@ GameObject:
   - component: {fileID: 1580580076}
   - component: {fileID: 1580580078}
   - component: {fileID: 1580580077}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: guide Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11614,7 +11615,7 @@ GameObject:
   - component: {fileID: 2058859380}
   - component: {fileID: 2058859379}
   - component: {fileID: 2058859378}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Scream Monologue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

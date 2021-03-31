@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class KeyCard : MonoBehaviour, IItem
 {
     
-    public void onPIckUp()
+    public void onPickUp()
     {
         PlayerItemInteraction player = FindObjectOfType<PlayerItemInteraction>();
         KeyCardInteraction keyCard = FindObjectOfType<KeyCardInteraction>();
