@@ -4434,7 +4434,7 @@ GameObject:
   - component: {fileID: 879941590}
   - component: {fileID: 879941589}
   m_Layer: 0
-  m_Name: Narrations and Dialogues(Monologues)
+  m_Name: Monologues
   m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4455,6 +4455,7 @@ MonoBehaviour:
   guideText: {fileID: 1580580077}
   animator: {fileID: 2058859378}
   scream: {fileID: 1833867331}
+  isMonologueDone: 0
   isInteracting: 0
 --- !u!61 &879941590
 BoxCollider2D:

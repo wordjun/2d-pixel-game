@@ -26,7 +26,7 @@ public class KeyCardInteraction : MonoBehaviour
             //Debug.Log("picked up keycard A, player  is: " + player.name);
             StartCoroutine(pickUpMessage());
         }
-        if (bSetInactive)
+        if (bSetInactive || EventsManager.isKeyCardEventDone)
         {
             StartCoroutine(setInactive());
         }

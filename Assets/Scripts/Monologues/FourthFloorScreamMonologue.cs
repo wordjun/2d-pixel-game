@@ -9,8 +9,8 @@ public class FourthFloorScreamMonologue : MonoBehaviour
     public Text guideText;
     public Animator animator;
     public AudioSource scream;
+    public bool isMonologueDone;
 
-    private bool isMonologueDone;
     [SerializeField] private bool isInteracting;
     void Start()
     {
@@ -42,9 +42,9 @@ public class FourthFloorScreamMonologue : MonoBehaviour
         {
             StartCoroutine(startMonologue());
         }
-        if (isMonologueDone && guideText.canvasRenderer.GetAlpha() == 0)
+        if ((isMonologueDone && guideText.canvasRenderer.GetAlpha() == 0) || EventsManager.isMonologueEventDone)
         {
-            animator.gameObject.SetActive(false);
+            StartCoroutine(setInactive());
         }
         
     }
@@ -57,7 +57,11 @@ public class FourthFloorScreamMonologue : MonoBehaviour
         yield return new WaitForSeconds(4.1f);
         isMonologueDone = true;
         guideText.canvasRenderer.SetAlpha(0);
+    }
 
+    IEnumerator setInactive()
+    {
+        yield return new WaitForSeconds(2.0f);
         gameObject.SetActive(false);
     }
 }
